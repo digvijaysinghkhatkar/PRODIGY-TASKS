@@ -1,0 +1,92 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: "Permanent Marker", cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #282c34; /* Dark gray background */
+  }
+  
+  /* Heading Styling */
+  h1 {
+    font-size: 40px;
+    color: #61dafb; /* Light blue heading */
+  }
+  
+  /* Status Text Styling */
+  .statusText {
+    font-size: 30px;
+    color: #f44336; /* Bright red for status text */
+  }
+  
+  /* Board Styling */
+  .board {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #3c3f41; /* Medium gray for board background */
+    border: 5px solid #61dafb; /* Light blue border around board */
+    border-radius: 10px; /* Rounded board edges */
+  }
+  
+  /* Cell Styling */
+  .cell {
+    font-size: 4rem;
+    border-bottom: 3px solid #61dafb; /* Light blue cell borders */
+    border-right: 3px solid #61dafb;
+    text-align: center;
+    text-transform: lowercase;
+    cursor: pointer;
+    user-select: none;
+    color: #ffffff; /* White text in cells */
+    background-color: #4a4e51; /* Darker gray for cells */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .cell:hover {
+    background-color: #5c6265; /* Slightly lighter gray on hover */
+  }
+  
+  .cell:nth-child(3n) {
+    border-right: none;
+  }
+  
+  .cell:nth-child(n + 7) {
+    border-bottom: none;
+  }
+  
+  /* Restart Button Styling */
+  .restartBtn {
+    background-color: #61dafb; /* Light blue button */
+    color: #282c34; /* Dark text on button */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .restartBtn:hover {
+    background-color: #4ea3d6; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
