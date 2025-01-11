@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        
+        <style>
+            .upload-box {
+                width: 200px;
+                height: 200px;
+                border: 2px dashed #ccc;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin: 20px auto;
+                position: relative;
+            }
+    
+            .upload-box img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+    
+            .url-input-container {
+                text-align: center;
+                margin-top: 10px;
+            }
+    
+            .url-input-container button {
+                padding: 5px 10px;
+                text-align: center;
+            }
+            .centered-text {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="upload-box" id="uploadBox">
+            <span>Click the button to upload the image</span>
+        </div>
+    
+        <div class="url-input-container">
+            <button onclick="loadImage()">Upload</button>
+        </div>
+    
+        <script>
+            function loadImage() {
+                const imageURL = 'img.jpeg'; // Hardcoded image URL
+                const uploadBox = document.getElementById('uploadBox');
+    
+                // Clear previous content
+                uploadBox.innerHTML = '';
+    
+                const img = document.createElement('img');
+                img.src = imageURL;
+                img.alt = 'Uploaded Photo';
+    
+                // Handle loading errors
+                img.onerror = () => {
+                    uploadBox.innerHTML = '<span>Could not load the image (img.jpg). Check the file!</span>';
+                };
+    
+                // Add the image to the box
+                uploadBox.appendChild(img);
+            }
+        </script>
+            <h1>Hi, I'm Digvijay Singh</h1>
+            <p>A passionate Web Developer with a knack for creating stunning and functional websites.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <p>Hello! I'm Digvijay Singh, is a passionate and driven individual with a knack for creativity and problem-solving. With a commitment to excellence, I excel in Computer Science  and are always eager to explore new opportunities."
+                Feel free to share more about your background, skills, or goals, and I can craft something more tailored!            
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Stop Watch</h3>
+                <p>A stopwatch web project is a simple application that allows users to track time with start, stop, and reset functionality, often built using HTML, CSS, and JavaScript..</p>
+            </div>
+            <div class="project-card">
+                <h3>Tic-Tac-Toe Game</h3>
+                <p>A web based game using HTML, CSS and JavaScript to play with friends.</p>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
